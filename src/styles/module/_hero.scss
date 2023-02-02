@@ -1,0 +1,28 @@
+@use 'reset';
+
+.hero {
+  background-image: url('https://images.prestigeonline.com/wp-content/uploads/sites/4/2021/12/28134738/sam-moqadam-yxZSAjyToP4-unsplash-scaled-1-1275x900.jpg');
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Open Sans';
+  margin-bottom: 2rem;
+
+  .hero__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px #000000;
+  }
+
+  .hero__tagline {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: 2px 2px #000000;
+  }
+}

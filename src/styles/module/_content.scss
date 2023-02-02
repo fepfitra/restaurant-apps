@@ -1,0 +1,70 @@
+@use 'reset';
+body{
+  background-color: black;
+
+  .content {
+    font-family: 'Open Sans', sans-serif;
+
+    .restos {
+      .restos__label {
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+        padding-bottom: 1.5rem;
+      }
+
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        .post-item {
+          color: #ffffff;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          // transition: all .2s ease-in-out;
+          border: 1px solid #ccc;
+          height: 30rem;
+          // white-space: nowrap;
+          text-overflow: ellipsis;
+
+          .post-item__thumbnail {
+            // border-radius: 50%;
+            width: 100%;
+            height: 13rem;
+            object-fit: fill;
+            margin-bottom: 1rem;
+            object-fit: cover;
+          }
+
+          .resto__title {
+            font-size: 1.3rem;
+            padding-left: 1rem;
+          }
+
+          .resto__rating {
+            font-size: 0.8rem;
+            padding-left: 1rem;
+            padding-top: 0.5rem;
+          }
+
+          .resto__desc {
+            padding: 1rem;
+            text-align: justify;
+            font-size: 0.9rem;
+            line-height: 1.3;
+          }
+          &:hover{
+            // transform: scale(1.05);
+            box-shadow: 0px 0px 10px;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+}
