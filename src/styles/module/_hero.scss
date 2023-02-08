@@ -1,8 +1,10 @@
 @use 'reset';
+@use 'media/hero';
 
 .hero {
   background-image: url('https://images.prestigeonline.com/wp-content/uploads/sites/4/2021/12/28134738/sam-moqadam-yxZSAjyToP4-unsplash-scaled-1-1275x900.jpg');
   background-size: cover;
+  background-position: center;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -12,6 +14,7 @@
   text-align: center;
   font-family: 'Open Sans';
   margin-bottom: 2rem;
+  min-height: 500px;
 
   .hero__title {
     font-size: 3rem;
