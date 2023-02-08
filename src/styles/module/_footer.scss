@@ -1,0 +1,29 @@
+@use 'reset';
+
+footer {
+  height: 5rem;
+  // border: 1px solid red;
+  margin-top: 2rem;
+  font-family: 'Open Sans', cursive;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    // border: 1px solid red;
+    list-style: none;
+    // margin-top: 1rem;
+
+    li {
+      margin: 1rem;
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        transform: all 0.2s;
+
+        &:hover {
+          color: #cccccc;
+        }
+      }
+    }
+  }
+}
