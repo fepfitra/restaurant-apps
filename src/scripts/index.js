@@ -23,17 +23,17 @@ restaurants.forEach((restaurant) => {
   `;
 });
 
-// menu.addEventListener('click', (event) => {
-//   drawer.classList.toggle('open');
-//   event.stopPropagation();
-// });
+menu.addEventListener('click', (event) => {
+  drawer.classList.toggle('open');
+  event.stopPropagation();
+});
 
-// hero.addEventListener('click', (event) => {
-//   drawer.classList.remove('open');
-//   event.stopPropagation();
-// });
+hero.addEventListener('click', (event) => {
+  drawer.classList.remove('open');
+  event.stopPropagation();
+});
 
-// main.addEventListener('click', (event) => {
-//   drawer.classList.remove('open');
-//   event.stopPropagation();
-// });
+main.addEventListener('click', (event) => {
+  drawer.classList.remove('open');
+  event.stopPropagation();
+});
