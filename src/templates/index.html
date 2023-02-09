@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <a href="#maincontent" class="skip-link">Skip to Content</a>
   <header class="header">
     <h1 class="header__title">
       Night City Food
@@ -15,13 +16,13 @@
 
     <nav id="drawer" class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#">Home</a></li>
-        <li class="nav__item"><a href="#">Contact</a></li>
-        <li class="nav__item"><a href="#">About</a></li>
+        <li class="nav__item"><a href="index.html">Home</a></li>
+        <li class="nav__item"><a href="#">Favorite</a></li>
+        <li class="nav__item"><a href="https://www.linkedin.com/in/fitra-fep-417049199/">About Us</a></li>
       </ul>
     </nav>
 
-    <a id="menu" class="header__menu">☰</a>
+    <a id="menu" class="header__menu" href="#">☰</a>
   </header>
 
   <div class="hero">
@@ -33,7 +34,7 @@
     <section class="content">
       <div class="restos">
         <h1 class="restos__label">Available Restos</h1>
-        <div class="posts">
+        <div class="posts" id="maincontent">
           <!-- filled by js -->
         </div>
       </div>
@@ -41,11 +42,12 @@
   </main>
 
   <footer>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html">Home</a></li>
+      <li class="nav__item"><a href="#">Favorite</a></li>
+      <li class="nav__item"><a href="https://www.linkedin.com/in/fitra-fep-417049199/">About Us</a></li>
     </ul>
+    <p>Copyright © 2020 - Hunger Apps</p>
   </footer>
 </body>
 </html>
