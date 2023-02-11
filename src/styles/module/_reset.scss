@@ -46,3 +46,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+//custom reset
+
+a, li {
+  min-width: 44px;
+  min-height: 44px;
+  text-align: center;
+}
