@@ -13,7 +13,7 @@ const drawer = document.querySelector('#drawer');
 
 restaurants.forEach((restaurant) => {
   posts.innerHTML += `
-    <article class="post-item">
+    <article class="post-item" tabindex="0">
       <img class="post-item__thumbnail"
       src="${restaurant.pictureId}"
       alt= "${restaurant.description}">
