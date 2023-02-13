@@ -15,10 +15,10 @@ restaurants.forEach((restaurant) => {
   posts.innerHTML += `
     <article class="post-item">
       <img class="post-item__thumbnail"
-      src="${restaurant.pictureId}">
+      src="${restaurant.pictureId}"
+      alt= "${restaurant.description}">
       <h2 class="resto__title">${restaurant.name} - ${restaurant.city}</h2>
       <h3 class="resto__rating">Rating - ${restaurant.rating}</h3>
-      <p class="resto__desc">${restaurant.description}</p>
     </article>
   `;
 });
