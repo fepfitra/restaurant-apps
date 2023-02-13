@@ -11,7 +11,6 @@
   color: #ffffff;
   font-family: 'Open Sans', cursive;
   min-height: 80px;
-  // transition: min-height 0.3s;
 
   .header__title {
     display: inline-block;
@@ -35,6 +34,8 @@
     .nav__item {
       margin-left: 1rem;
       a {
+        height: 44px;
+        width: 44px;
         color: #ffffff;
         text-decoration: none;
         transition: all 0.2s;
@@ -45,29 +46,3 @@
     }
   }
 }
-
-// #drawer {
-//   position: absolute;
-//   transform: translate(-250px, 0);
-//   transition: transform 0.3s ease-in-out;
-//   // background-color: black;
-
-//   &.open {
-//     transform: translate(0,0);
-//   }
-
-//   ul {
-//     list-style-type: none;
-//     padding: 0, 16px;
-//   
-//     li {
-//       padding: 5px, 0px;
-
-//       a {
-//         text-decoration: none;
-//         font-size: 2rem;
-//         color: white;
-//       }
-//     }
-//   }
-// }

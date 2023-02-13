@@ -3,16 +3,6 @@
   color: white;
 }
 
-// @media screen and (max-width: 1700px) {
-//   
-// }
-
-// @media screen and (max-width: 1200px) {
-// }
-
-// @media screen and (max-width: 1000px) {
-// }
-
 @media screen and (max-width: 600px) {
   .header{
     grid-template-columns: 1fr;
@@ -39,16 +29,21 @@
 
       ul {
         list-style: none;
-        display: inline-block;
-
+        display: block;
+        padding-left: 1rem;
         li {
-          margin: 20px auto;
+          height: 44px;
+          a {
+            height: 44px;
+            border: 1px solid red;
+          }
         }
       }
     }
 
     #menu {
-      display: inline-block;
+      display: inline;
+      text-align: center;
       margin: 10px auto;
     }
   }
