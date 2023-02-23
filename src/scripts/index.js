@@ -3,10 +3,10 @@ import '../styles/main.scss';
 import '../styles/responsive.scss';
 import data from '../DATA.json';
 
-const {restaurants} = data;
+const { restaurants } = data;
 
-const posts = document.querySelector(".posts");
-const menu = document.querySelector("#menu");
+const posts = document.querySelector('.posts');
+const menu = document.querySelector('#menu');
 const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#drawer');
