@@ -5,7 +5,7 @@ const DrawerInitiator = {
     });
 
     content.addEventListener('click', (event) => {
-      this._closeDrawer(event, drawer,);
+      this._closeDrawer(event, drawer);
     });
   },
 
@@ -16,7 +16,7 @@ const DrawerInitiator = {
 
   _closeDrawer(event, drawer){
     event.stopPropagation();
-    drawer.classList.toggle('open');
+    drawer.classList.remove('open');
   },
 };
 
