@@ -2,6 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import '../styles/responsive.scss';
 import data from '../DATA.json';
+import App from './views/app';
 
 const { restaurants } = data;
 
@@ -23,17 +24,23 @@ restaurants.forEach((restaurant) => {
   `;
 });
 
-menu.addEventListener('click', (event) => {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
-});
+// menu.addEventListener('click', (event) => {
+//   drawer.classList.toggle('open');
+//   event.stopPropagation();
+// });
 
-hero.addEventListener('click', (event) => {
-  drawer.classList.remove('open');
-  event.stopPropagation();
-});
+// hero.addEventListener('click', (event) => {
+//   drawer.classList.remove('open');
+//   event.stopPropagation();
+// });
 
-main.addEventListener('click', (event) => {
-  drawer.classList.remove('open');
-  event.stopPropagation();
+// main.addEventListener('click', (event) => {
+//   drawer.classList.remove('open');
+//   event.stopPropagation();
+// });
+
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('main'),
 });
