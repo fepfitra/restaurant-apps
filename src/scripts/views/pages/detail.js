@@ -9,8 +9,7 @@ const Detail = {
   },
 
   async afterRender() {
-    const url = UrlParser.parseActiveUrlWithCombiner();
-    console.log(url);
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantsSource.detailRestaurant(url.id);
     console.log(restaurant);
   },
