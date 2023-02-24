@@ -1,9 +1,9 @@
-import Main from '../views/pages/main';
+import List from '../views/pages/list';
 import Detail from '../views/pages/detail';
 
 const routes = {
-  '/': Main,
-  '/main': Main,
+  '/': List,
+  '/list': List,
   '/detail/:id': Detail,
 };
 

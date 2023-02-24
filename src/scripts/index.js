@@ -1,7 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import '../styles/responsive.scss';
-import data from '../DATA.json';
 import App from './views/app';
 
 // const { restaurants } = data;

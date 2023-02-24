@@ -7,7 +7,7 @@ class App {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-
+    
     this._initialAppShell();
   }
 
@@ -22,6 +22,7 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
+    // console.log(page.render());
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }
