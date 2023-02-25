@@ -4,7 +4,7 @@ import '../styles/responsive.scss';
 import swRegister from './utils/sw-register';
 import App from './views/app';
 
-const navList = [
+const navListItem = [
   {
     value: 'Home',
     href: '#/list',
@@ -28,8 +28,10 @@ const app = new App({
   header: {
     component: document.querySelector('custom-header'),
     title: 'Night City Food',
-    menu: '☰',
-    navList: navList,
+    hamburger: '☰',
+    navList: {
+      navListItem: navListItem,
+    },
   },
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),

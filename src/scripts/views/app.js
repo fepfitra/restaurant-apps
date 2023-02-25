@@ -2,12 +2,12 @@ import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 import '../components/skip-to-content';
+import '../components/custom-header';
 
 class App {
   constructor({ skipToContent, header, button, drawer, content }) {
     this._skipToContent = skipToContent;
     this._header = header;
-    console.log(header);
     this._button = button;
     this._drawer = drawer;
     this._content = content;
@@ -26,10 +26,10 @@ class App {
   }
 
   _initialHeader() {
-    const {component, title, menu, navList} = this._header;
+    const {component, title, hamburger, navList} = this._header;
     component.render({
       title: title,
-      menu: menu,
+      hamburger: hamburger,
       navList: navList,
     });
   }

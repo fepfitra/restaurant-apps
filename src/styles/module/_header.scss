@@ -1,21 +1,6 @@
 @use 'reset';
 @use 'media/header';
 
-.skip-link {
-  position: absolute;
-  color: white;
-  z-index: 1;
-  top: -40px;
-  left: 0;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
-
-  &:focus {
-    top: 0;
-  }
-}
-
 .header {
   position: sticky;
   top: 0;
