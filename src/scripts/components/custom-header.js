@@ -9,7 +9,6 @@ class customHeader extends HTMLElement {
   }
 
   render({title = '', hamburger = '', navList}) {
-this.shadowDOM.innerHTML='test';
     let navListHTML = '';
     navList.navListItem.forEach(item => {
       navListHTML += `

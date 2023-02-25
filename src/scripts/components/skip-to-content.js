@@ -9,7 +9,6 @@ class skipToContent extends HTMLElement {
   }
 
   render({href = '', value = ''}) {
-    console.log(value);
     this.shadowDOM.innerHTML = `
       ${this._style()}
       <a href="${href}" class="skip-link">${value}</a>
