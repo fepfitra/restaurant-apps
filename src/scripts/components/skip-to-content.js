@@ -11,6 +11,13 @@ class skipToContent extends HTMLElement {
   render({href = '', value = ''}) {
     console.log(value);
     this.shadowDOM.innerHTML = `
+      ${this._style()}
+      <a href="${href}" class="skip-link">${value}</a>
+    `;
+  }
+
+  _style() {
+    return `
       <style>
         .skip-link {
           position: absolute;
@@ -27,9 +34,7 @@ class skipToContent extends HTMLElement {
         .skip-link:focus {
           top: 0;
         }
-      </style>
-      <a href="${href}" class="skip-link">${value}</a>
-    `;
+      </style>`;
   }
 }
 
