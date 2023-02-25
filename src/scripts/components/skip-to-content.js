@@ -1,4 +1,3 @@
-
 class skipToContent extends HTMLElement {
   constructor() {
     super();
@@ -6,13 +5,11 @@ class skipToContent extends HTMLElement {
   }
 
   connectedCallback() {
-    this._href = this.getAttribute('href') || null;
-    this._value = this.getAttribute('value') || null;
-
     this.render();
   }
 
-  render({href = this._href, value = this._value}) {
+  render({href = '', value = ''}) {
+    console.log(value);
     this.shadowDOM.innerHTML = `
       <style>
         .skip-link {
