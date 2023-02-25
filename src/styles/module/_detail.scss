@@ -1,0 +1,18 @@
+@use 'reset';
+// @use '' for responsive
+
+.detail-item {
+  border: 1px solid red;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .resto__rating {
+    color: white;
+  }
+}
