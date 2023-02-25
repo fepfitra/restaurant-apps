@@ -36,6 +36,13 @@ this.shadowDOM.innerHTML='test';
   _style() {
     return `
       <style>
+        #menu{
+          display: none;
+          color: white;
+          background-color: black;
+          border: none;
+        }
+
         .header {
           position: sticky;
           top: 0;
@@ -82,13 +89,6 @@ this.shadowDOM.innerHTML='test';
 
         a:hover {
           color: #cccccc;
-        }
-
-        #menu{
-          display: none;
-          color: white;
-          background-color: rgba($color: white, $alpha: 0);
-          border: none;
         }
 
         @media screen and (max-width: 768px) {
