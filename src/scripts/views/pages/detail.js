@@ -24,6 +24,7 @@ const Detail = {
         name: restaurant.restaurant.name,
         description: restaurant.restaurant.description,
         rating: restaurant.restaurant.rating,
+        pictureId: restaurant.restaurant.pictureId,
       },
     });
   },
