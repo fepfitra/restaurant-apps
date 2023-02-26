@@ -1,4 +1,4 @@
-import CacheHelper from "./utils/cache-helper";
+import CacheHelper from './utils/cache-helper';
 
 const assetToCache = [
   './',
@@ -12,11 +12,11 @@ const assetToCache = [
 self.addEventListener('install', (event) => {
   event.waitUntil(CacheHelper.cachingAppShell([...assetToCache]));
 });
- 
+
 self.addEventListener('activate', (event) => {
   event.waitUntil(CacheHelper.deleteOldCache());
 });
- 
+
 self.addEventListener('fetch', (event) => {
   event.respondWith(fetch(event.request));
 });

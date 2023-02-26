@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantsSource from '../../data/restaurants-source';
-import { createRestaurantDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
@@ -23,8 +23,8 @@ const Detail = {
         id: restaurant.restaurant.id,
         name: restaurant.restaurant.name,
         description: restaurant.restaurant.description,
-        rating: restaurant.restaurant.rating,       
-      }
+        rating: restaurant.restaurant.rating,
+      },
     });
   },
 };

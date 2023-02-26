@@ -1,4 +1,4 @@
-import CONFIG from "../globals/config";
+import CONFIG from '../globals/config';
 
 const CacheHelper = {
   async cachingAppShell(requests) {
@@ -23,10 +23,10 @@ const CacheHelper = {
     return this._fetchRequest(request);
   },
 
-  async _fetchRequest(request){
+  async _fetchRequest(request) {
     const response = await fetch(request);
 
-    if (!response || response.status !== 200){
+    if (!response || response.status !== 200) {
       return response;
     }
 
@@ -34,14 +34,14 @@ const CacheHelper = {
     return response;
   },
 
-  async _addCache(request){
+  async _addCache(request) {
     const cache = await this._openCache();
     cache.add(request);
   },
 
   async _openCache() {
     return caches.open(CONFIG.CACHE_NAME);
-  }
+  },
 };
 
 export default CacheHelper;
