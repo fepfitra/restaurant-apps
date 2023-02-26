@@ -1,14 +1,14 @@
 const swRegister = async () => {
-  if(!('serviceWorker' in navigator)) {
-    console.log('Sevice worker not supported in the browser');
+  if (!('serviceWorker' in navigator)) {
+    console.log('Service Worker not supported in the browser');
     return;
   }
 
   try {
     await navigator.serviceWorker.register('./sw.bundle.js');
-    console.log('Sevice worker registered');
+    console.log('Service worker registered');
   } catch (error) {
-    console.log('Failecd to register service worker', error);
+    console.log('Failed to register service worker', error);
   }
 };
 

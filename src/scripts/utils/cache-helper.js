@@ -1,4 +1,3 @@
-import { cache, Resolver } from "webpack";
 import CONFIG from "../globals/config";
 
 const CacheHelper = {
@@ -17,32 +16,32 @@ const CacheHelper = {
   async revalidateCache(request) {
     const response = await caches.match(request);
 
-    if(response) {
+    if (request) {
       this._fetchRequest(request);
       return response;
     }
     return this._fetchRequest(request);
   },
 
-  async _openCache() {
-    return cache.open(CONFIG.CACHE_NAME);
-  },
-
-  async _fetchRequest(request) {
+  async _fetchRequest(request){
     const response = await fetch(request);
 
-    if(!response || response.status !== 200) {
+    if (!response || response.status !== 200){
       return response;
     }
 
-    await this._addCache();
+    await this._addCache(request);
     return response;
   },
 
-  async _addCache(request) {
+  async _addCache(request){
     const cache = await this._openCache();
     cache.add(request);
   },
+
+  async _openCache() {
+    return caches.open(CONFIG.CACHE_NAME);
+  }
 };
 
 export default CacheHelper;
