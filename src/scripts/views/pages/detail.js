@@ -2,6 +2,7 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantsSource from '../../data/restaurants-source';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import AddReviewInitiator from '../../utils/add-review-initiator';
 
 const Detail = {
   async render() {
@@ -28,6 +29,12 @@ const Detail = {
         city: restaurant.restaurant.city,
       },
     });
+    AddReviewInitiator.init({
+      id: restaurant.restaurant.id,
+      inputName: document.getElementById('input__review__name'),
+      inputReview: document.getElementById('input__review__data'),
+      button: document.querySelector('#submit__review__button'),
+    })
   },
 };
 

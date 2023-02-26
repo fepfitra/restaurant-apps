@@ -68,6 +68,15 @@ const createRestaurantDetailTemplate = (restaurant) => {
         </div>
       </article>
       <article id="add-review" class="detail-card" tabindex="0">
+        <form class="review__form">
+          <div class="review__body">
+            <input type="text" class="review__input" id="input__review__name" placeholder="Nama">
+            <textarea class="review__input" id="input__review__data" placeholder="Masukkan Review" rows="5"></textarea>
+          </div>
+          <button type="submit" class="add__review__button" id="submit__review__button">
+            Tambahkan Review
+          </button>
+        </form>
       </article>
       <article id="reviews" class="detail-card" tabindex="0">
         ${customerReviews}

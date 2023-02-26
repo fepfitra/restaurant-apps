@@ -108,9 +108,52 @@
     }
   }
 
+  #add-review {
+
+    .review__form {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: auto;
+      row-gap: 10px;
+
+      .review__body {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+
+        .review__input {
+          background-color: black;
+          box-sizing: border-box;
+          border-radius: 10px;
+          font-size: 1.1rem;
+          border: 1px solid white;
+          padding: 20px;
+          resize: none;
+        }
+
+        #input__review__name {
+          color: white;
+        }
+
+        #input__review__data {
+          color: white;
+        }
+      }
+
+      .add__review__button {
+        border-radius: 10px;
+        font-size: 1.1rem;
+        background-color: #DB0000;
+        color: white;
+        padding: 10px;
+        border: 0;
+      }
+    }
+  }
+
   #reviews {
     .reviews__item {
-      // border: 1px solid red;
       color: white;
       padding: 1rem;
 
@@ -126,6 +169,7 @@
       .reviews__review {
         font-size: 1rem;
         font-weight: bold;
+        line-height: 1.3rem;
       }
     }
   }
