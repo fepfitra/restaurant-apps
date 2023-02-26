@@ -1,3 +1,5 @@
+import NotificationHelper from "./notification-helper";
+
 const WebSocketInitiator = {
   init(url) {
     const webSocket = new WebSocket(url);
@@ -5,9 +7,15 @@ const WebSocketInitiator = {
   },
 
   _onMessageHandler(message) {
-    console.log(message.data);
-    console.log(JSON.parse(message.data));
-  },
+    const restaurant = JSON.parse(message.data);
+
+    NotificationHelper.sendNotification({
+      title: `${restaurant.title} is on cinema`,
+      options: {
+        body: restaurant.overview,
+      }
+    })
+  }
 };
 
 export default WebSocketInitiator;
