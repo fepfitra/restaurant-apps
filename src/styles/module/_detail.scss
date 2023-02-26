@@ -74,15 +74,14 @@
   #menus {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // grid-gap: 5px;
 
     .menu__item {
       display: flex;
       flex-direction: row;
 
       .menu__food-thumbnail {
-        height: 60px;
-        width: 60px;
+        min-height: 60px;
+        min-width: 60px;
         margin: 10px;
         border-radius: 10px;
 
@@ -91,8 +90,8 @@
       }
 
       .menu__drink-thumbnail {
-        height: 60px;
-        width: 60px;
+        min-height: 60px;
+        min-width: 60px;
         margin: 10px;
         border-radius: 10px;
 
