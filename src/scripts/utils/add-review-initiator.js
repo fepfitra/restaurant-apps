@@ -1,10 +1,12 @@
-import RestaurantsSource from "../data/restaurants-source";
+import RestaurantsSource from '../data/restaurants-source';
 
 const AddReviewInitiator = {
-  init({id, inputName, inputReview, button }) {
+  init({
+    id, inputName, inputReview, button,
+  }) {
     button.addEventListener('click', async () => {
       await RestaurantsSource.postReview({
-        id: id,
+        id,
         name: inputName.value,
         review: inputReview.value,
       });

@@ -12,8 +12,8 @@ class RestaurantsSource {
     return response.json();
   }
 
-  static async postReview({id, name, review }) {
-    const response = await fetch(API_ENDPOINT.POST_REVIEW,{
+  static async postReview({ id, name, review }) {
+    const response = await fetch(API_ENDPOINT.POST_REVIEW, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

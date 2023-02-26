@@ -34,7 +34,7 @@ const Detail = {
       inputName: document.getElementById('input__review__name'),
       inputReview: document.getElementById('input__review__data'),
       button: document.querySelector('#submit__review__button'),
-    })
+    });
   },
 };
 
