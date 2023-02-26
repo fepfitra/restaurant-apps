@@ -23,7 +23,7 @@ import CONFIG from './globals/config';
 //   `;
 // });
 
-const app = new App({ 
+const app = new App({
   skipToContent: {
     component: document.querySelector('skip-to-content'),
     href: '#maincontent',
@@ -42,4 +42,5 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+  document.querySelector('.loader__container').style.display = 'none';
 });

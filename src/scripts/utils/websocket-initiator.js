@@ -1,4 +1,4 @@
-import NotificationHelper from "./notification-helper";
+import NotificationHelper from './notification-helper';
 
 const WebSocketInitiator = {
   init(url) {
@@ -13,9 +13,9 @@ const WebSocketInitiator = {
       title: `${restaurant.title} is on cinema`,
       options: {
         body: restaurant.overview,
-      }
-    })
-  }
+      },
+    });
+  },
 };
 
 export default WebSocketInitiator;

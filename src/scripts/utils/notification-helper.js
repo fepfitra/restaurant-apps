@@ -1,5 +1,5 @@
 const NotificationHelper = {
-  sendNotification( { title, options}) {
+  sendNotification({ title, options }) {
     if (!this._checkAvailability()) {
       console.log('Notification not supported in this browser');
       return;
@@ -19,7 +19,7 @@ const NotificationHelper = {
   },
 
   _checkPermission() {
-    return Notification.permission == 'granted';
+    return Notification.permission === 'granted';
   },
 
   async _requestPermission() {
@@ -29,7 +29,7 @@ const NotificationHelper = {
       console.log('Notification Denied');
     }
 
-    if (status == 'default') {
+    if (status === 'default') {
       console.log('Permission closed');
     }
   },
@@ -37,7 +37,7 @@ const NotificationHelper = {
   async _showNotification({ title, options }) {
     const serviceWorkerRegistration = await navigator.serviceWorker.ready;
     serviceWorkerRegistration.showNotification(title, options);
-  }
+  },
 };
 
 export default NotificationHelper;
