@@ -108,4 +108,26 @@
       }
     }
   }
+
+  #reviews {
+    .reviews__item {
+      // border: 1px solid red;
+      color: white;
+      padding: 1rem;
+
+      .reviews__name {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+
+      .reviews__date {
+        font-size: 0.8rem;
+        padding: 10px 0;
+      }
+      .reviews__review {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
 }

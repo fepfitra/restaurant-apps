@@ -31,7 +31,14 @@ const createRestaurantDetailTemplate = (restaurant) => {
   let customerReviews = '';
   restaurant.customerReviews.forEach((customerReview) => {
     console.log(customerReview);
-  })
+    customerReviews += `
+      <div class="reviews__item">
+        <h2 class="reviews__name">${customerReview.name}</h2>
+        <h3 class="reviews__date">${customerReview.date}</h3>
+        <p class="reviews__review">${customerReview.review}</p>
+      </div>
+    `;
+  });
 
   return`
     <h1 class="desc-item__title">${restaurant.name} - ${restaurant.city}</h2>
