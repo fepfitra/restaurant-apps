@@ -10,7 +10,7 @@ const UrlParser = {
     return this._urlSplitter(url);
   },
 
-  _urlSplitter(url){
+  _urlSplitter(url) {
     const urlSplits = url.split('/');
     return {
       resource: urlSplits[1] || null,
@@ -25,6 +25,5 @@ const UrlParser = {
     + (splitedUrl.verb ? `${splitedUrl.verb}` : '');
   },
 };
-
 
 export default UrlParser;

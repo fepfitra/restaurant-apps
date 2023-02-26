@@ -1,5 +1,6 @@
-import RestaurantsSource from "../../data/restaurants-source";
-import { createRestaurantItemTemplate } from "../templates/template-creator";
+import RestaurantsSource from '../../data/restaurants-source';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
+
 const List = {
   async render() {
     // return `
@@ -19,7 +20,7 @@ const List = {
           </div>
         </div>
       </section>
-    `
+    `;
   },
 
   async afterRender() {

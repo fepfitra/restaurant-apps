@@ -7,7 +7,7 @@ class App {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-    
+
     this._initialAppShell();
   }
 

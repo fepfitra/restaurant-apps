@@ -1,11 +1,11 @@
 import CONFIG from '../../globals/config';
 
-const createRestaurantDetailTemplate = (restaurant) => { 
+const createRestaurantDetailTemplate = (restaurant) => {
   let categories = '';
   restaurant.categories.forEach((category) => {
     categories += `${category.name}, `;
   });
-  categories = categories.substring(0, categories.length-2);
+  categories = categories.substring(0, categories.length - 2);
 
   let foods = '';
   restaurant.menus.foods.forEach((food) => {
@@ -27,10 +27,8 @@ const createRestaurantDetailTemplate = (restaurant) => {
     `;
   });
 
-  console.log(restaurant);
   let customerReviews = '';
   restaurant.customerReviews.forEach((customerReview) => {
-    console.log(customerReview);
     customerReviews += `
       <div class="reviews__item">
         <h2 class="reviews__name">${customerReview.name}</h2>
@@ -40,7 +38,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
     `;
   });
 
-  return`
+  return `
     <h1 class="desc-item__title">${restaurant.name} - ${restaurant.city}</h2>
     <div class="detail-content">
       <article id="desc-item" class="detail-card" tabindex="0">
@@ -77,7 +75,6 @@ const createRestaurantDetailTemplate = (restaurant) => {
     </div>
   `;
 };
-
 
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="post-item" tabindex="0">

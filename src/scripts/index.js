@@ -8,7 +8,6 @@ import App from './views/app';
 // const posts = document.querySelector('.posts');
 // const hero = document.querySelector('.hero');
 
-
 // restaurants.forEach((restaurant) => {
 //   posts.innerHTML += `
 //     <article class="post-item" tabindex="0">

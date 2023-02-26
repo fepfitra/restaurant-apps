@@ -8,7 +8,7 @@ const Detail = {
       <section class="content" tabindex="0">
       </section>
     `;
-  }, 
+  },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
