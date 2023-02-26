@@ -33,9 +33,6 @@ const app = new App({
       navListItem: navListItem,
     },
   },
-  button: document.querySelector('#menu'),
-  drawer: document.querySelector('#drawer'),
-  content: document.querySelector('main'),
 });
 
 window.addEventListener('hashchange', () => {

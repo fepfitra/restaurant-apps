@@ -1,3 +1,5 @@
+import DrawerInitiator from "../utils/drawer-initiator";
+
 class customHeader extends HTMLElement {
   constructor() {
     super();
@@ -8,6 +10,13 @@ class customHeader extends HTMLElement {
     this.render();
   }
 
+  get drawer () {
+    return this._drawer;
+  }
+
+  get button () {
+    return this._button;
+  }
   render({title = '', hamburger = '', navList}) {
     let navListHTML = '';
     navList.navListItem.forEach(item => {
@@ -15,6 +24,7 @@ class customHeader extends HTMLElement {
         <li class="nav__item"><a href="${item.href}">${item.value}</a></li>
       `;
     });
+
     this.shadowDOM.innerHTML = `
       ${this._style()}
       <header class="header">
@@ -31,6 +41,12 @@ class customHeader extends HTMLElement {
         </nav>
       </header>
     `;
+    
+    DrawerInitiator.init({
+      button: this.shadowDOM.querySelector('#menu'),
+      drawer: this.shadowDOM.querySelector('#drawer'),
+      content: document.querySelector('main'),
+    })
   }
   _style() {
     return `
@@ -122,6 +138,7 @@ class customHeader extends HTMLElement {
           }
 
           li {
+            display: inline-block;
             height: 44px;
           }
 

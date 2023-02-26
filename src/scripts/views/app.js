@@ -1,20 +1,15 @@
-import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 import '../components/skip-to-content';
 import '../components/custom-header';
 
 class App {
-  constructor({ skipToContent, header, button, drawer, content }) {
+  constructor({ skipToContent, header }) {
     this._skipToContent = skipToContent;
     this._header = header;
-    this._button = button;
-    this._drawer = drawer;
-    this._content = content;
     
     this._initialSkipToContent();
     this._initialHeader();
-    this._initialAppShell();
   } 
 
   _initialSkipToContent() {
@@ -31,14 +26,6 @@ class App {
       title: title,
       hamburger: hamburger,
       navList: navList,
-    });
-  }
-
-  _initialAppShell() { 
-    DrawerInitiator.init({
-      button: this._button,
-      drawer: this._drawer,
-      content: this._content,
     });
   }
 
