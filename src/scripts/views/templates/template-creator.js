@@ -4,8 +4,34 @@ const createRestaurantDetailTemplate = (restaurant) => {
   let categories = '';
   restaurant.categories.forEach((category) => {
     categories += `${category.name}, `;
-  })
+  });
   categories = categories.substring(0, categories.length-2);
+
+  let foods = '';
+  restaurant.menus.foods.forEach((food) => {
+    foods += `
+      <div class="menu__item">
+        <img class="menu__food-thumbnail">
+        <h3 class="menu__name">${food.name}</h3>
+      </div>
+    `;
+  });
+
+  let drinks = '';
+  restaurant.menus.drinks.forEach((drink) => {
+    drinks += `
+      <div class="menu__item">
+        <img class="menu__drink-thumbnail">
+        <h3 class="menu__name">${drink.name}</h3>
+      </div>
+    `;
+  });
+
+  console.log(restaurant);
+  let customerReviews = '';
+  restaurant.customerReviews.forEach((customerReview) => {
+    console.log(customerReview);
+  })
 
   return`
     <h1 class="desc-item__title">${restaurant.name} - ${restaurant.city}</h2>
@@ -20,19 +46,26 @@ const createRestaurantDetailTemplate = (restaurant) => {
           </div>
         </div>
 
-        <h3 class="desc-item__info">Address</h3>
+        <h3 class="desc-item__info">Alamat</h3>
         <h4 class="desc-item__info-value">${restaurant.address}</h4>
 
-        <h3 class="desc-item__info">Categories</h3>
+        <h3 class="desc-item__info">Kategori</h3>
         <h4 class="desc-item__info-value">${categories}</h4>
 
         <p class="desc-item__desc">${restaurant.description}</p>
       </article>
       <article id="menus" class="detail-card" tabindex="0">
+        <div class="menus__foods">
+          ${foods}
+        </div>
+        <div class="menus__drinks">
+          ${drinks}
+        </div>
       </article>
       <article id="add-review" class="detail-card" tabindex="0">
       </article>
       <article id="reviews" class="detail-card" tabindex="0">
+        ${customerReviews}
       </article>
     </div>
   `;

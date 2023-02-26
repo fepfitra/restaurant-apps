@@ -15,7 +15,6 @@ const Detail = {
     const restaurant = await RestaurantsSource.detailRestaurant(url.id);
     const restaurantContainer = document.querySelector('.content');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
-    console.log(restaurant.restaurant);
   },
 };
 
