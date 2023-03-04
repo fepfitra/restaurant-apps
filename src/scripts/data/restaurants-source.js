@@ -20,6 +20,7 @@ class RestaurantsSource {
       },
       body: JSON.stringify({ id, name, review }),
     });
+    console.log(response);
     return response.json();
   }
 }
