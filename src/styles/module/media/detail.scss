@@ -5,3 +5,10 @@
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 512px) {
+  #menus {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

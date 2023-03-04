@@ -6,11 +6,10 @@ const AddReviewInitiator = {
   }) {
     button.addEventListener('click', async () => {
       await RestaurantsSource.postReview({
-        id,
+        id: id,
         name: inputName.value,
         review: inputReview.value,
       });
-      location.reload();
     });
   },
 };

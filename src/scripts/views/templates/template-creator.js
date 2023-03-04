@@ -11,7 +11,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   restaurant.menus.foods.forEach((food) => {
     foods += `
       <div class="menu__item">
-        <img class="menu__food-thumbnail">
+        <img class="menu__food-thumbnail" alt="${food.name}">
         <h3 class="menu__name">${food.name}</h3>
       </div>
     `;
@@ -21,7 +21,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   restaurant.menus.drinks.forEach((drink) => {
     drinks += `
       <div class="menu__item">
-        <img class="menu__drink-thumbnail">
+        <img class="menu__drink-thumbnail" alt="${drink.name}">
         <h3 class="menu__name">${drink.name}</h3>
       </div>
     `;
