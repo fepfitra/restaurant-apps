@@ -1,3 +1,5 @@
+import imageFood from '../../../public/images/heros/hero-image_2.jpg';
+import imageDrink from '../../../public/images/heros/hero-image_1.jpg';
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => {
@@ -11,7 +13,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   restaurant.menus.foods.forEach((food) => {
     foods += `
       <div class="menu__item">
-        <img class="menu__food-thumbnail" alt="${food.name}">
+        <img width="60px" src="${imageFood}" class="menu__food-thumbnail" alt="${food.name}">
         <h3 class="menu__name">${food.name}</h3>
       </div>
     `;
@@ -21,7 +23,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   restaurant.menus.drinks.forEach((drink) => {
     drinks += `
       <div class="menu__item">
-        <img class="menu__drink-thumbnail" alt="${drink.name}">
+        <img width="60px" src="${imageDrink}" class="menu__drink-thumbnail" alt="${drink.name}">
         <h3 class="menu__name">${drink.name}</h3>
       </div>
     `;
@@ -47,7 +49,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
           src="${CONFIG.BASE_URL + CONFIG.LARGE_PICTURE + restaurant.pictureId}"
           alt="${restaurant.description}">
           <div class="desc-item__rating">
-            <h2 class="desc-item__rating-score">⭐️ ${restaurant.rating}</h2>
+            <h2 class="desc-item__rating-score">⭐️ ${restaurant.rating}</h3>
           </div>
         </div>
 

@@ -4,7 +4,8 @@ const AddReviewInitiator = {
   init({
     id, inputName, inputReview, button,
   }) {
-    button.addEventListener('click', async () => {
+    button.addEventListener('click', async (event) => {
+      event.preventDefault();
       await RestaurantsSource.postReview({
         id: id,
         name: inputName.value,

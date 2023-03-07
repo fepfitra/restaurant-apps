@@ -73,7 +73,7 @@
 
   #menus {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     .menu__item {
       display: flex;
@@ -84,8 +84,6 @@
         min-width: 60px;
         margin: 10px;
         border-radius: 10px;
-
-        background-image: url(../public/images/heros/hero-image_2.jpg);
         background-size: cover;
       }
 
@@ -94,8 +92,6 @@
         min-width: 60px;
         margin: 10px;
         border-radius: 10px;
-
-        background-image: url(../public/images/heros/hero-image_1.jpg);
         background-size: cover;
       }
 
