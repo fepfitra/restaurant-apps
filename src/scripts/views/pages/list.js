@@ -15,7 +15,7 @@ const List = {
       <section class="content">
         <div class="restos">
           <h1 class="restos__label">Available Restos</h1>
-          <div class="posts" id="maincontent" tabindex="0">
+          <div class="posts" id="maincontent">
 
           </div>
         </div>

@@ -7,7 +7,7 @@ import AddReviewInitiator from '../../utils/add-review-initiator';
 const Detail = {
   async render() {
     return `
-      <section class="content" tabindex="0"></section>
+      <section class="content"></section>
       <div id="likeButtonContainer"></div>
     `;
   },

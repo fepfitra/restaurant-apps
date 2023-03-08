@@ -5,7 +5,7 @@ class skipToContent extends HTMLElement {
   }
 
   connectedCallback() {
-    this._href = this.getAttribute('href') || null;
+    this._target = this.getAttribute('target') || null;
     this._value = this.getAttribute('value') || null;
 
     this.render();
@@ -17,6 +17,7 @@ class skipToContent extends HTMLElement {
         .skip-link {
           position: absolute;
           color: white;
+          background-color: black;
           z-index: 3;
           top: -40px;
           left: 0;
@@ -29,8 +30,11 @@ class skipToContent extends HTMLElement {
           top: 0;
         }
       </style>
-      <a href="${this._href}" class="skip-link">${this._value}</a>
+      <button class="skip-link">${this._value}</button>
     `;
+    this.shadowDOM.addEventListener('click', () => {
+      document.querySelector(this._target).focus();
+    })
   }
 }
 

@@ -7,7 +7,7 @@ const Like = {
       <section class="content">
         <div class="restos">
           <h1 class="restos__label">Your Liked Restaurants</h1>
-          <div class="posts" id="maincontent" tabindex="0">
+          <div class="posts" id="maincontent">
 
           </div>
         </div>

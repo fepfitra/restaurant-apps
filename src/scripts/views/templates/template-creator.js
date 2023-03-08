@@ -43,7 +43,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   return `
     <h1 class="desc-item__title">${restaurant.name} - ${restaurant.city}</h2>
     <div class="detail-content">
-      <article id="desc-item" class="detail-card" tabindex="0">
+      <article id="desc-item" class="detail-card">
         <div class="desc-item__thumbnail">
           <img class="desc-item__thumbnail-image"
           src="${CONFIG.BASE_URL + CONFIG.LARGE_PICTURE + restaurant.pictureId}"
@@ -61,7 +61,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
 
         <p class="desc-item__desc">${restaurant.description}</p>
       </article>
-      <article id="menus" class="detail-card" tabindex="0">
+      <article id="menus" class="detail-card">
         <div class="menus__foods">
           ${foods}
         </div>
@@ -69,7 +69,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
           ${drinks}
         </div>
       </article>
-      <article id="add-review" class="detail-card" tabindex="0">
+      <article id="add-review" class="detail-card">
         <form class="review__form">
           <div class="review__body">
             <input type="text" class="review__input" id="input__review__name" placeholder="Nama">
@@ -80,7 +80,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
           </button>
         </form>
       </article>
-      <article id="reviews" class="detail-card" tabindex="0">
+      <article id="reviews" class="detail-card">
         ${customerReviews}
       </article>
     </div>
@@ -88,7 +88,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
 };
 
 const createRestaurantItemTemplate = (restaurant) => `
-  <article class="post-item" tabindex="0">
+  <article class="post-item">
     <img class="post-item__thumbnail"
     src="${CONFIG.BASE_URL + CONFIG.SMALL_PICTURE + restaurant.pictureId}"
     alt= "${restaurant.description}">
