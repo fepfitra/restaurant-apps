@@ -2,7 +2,7 @@ import RestaurantsSource from '../data/restaurants-source';
 
 const AddReviewInitiator = {
   init({
-    id, inputName, inputReview, submitButton, reviewsContainer
+    id, inputName, inputReview, submitButton, reviewsContainer,
   }) {
     submitButton.addEventListener('click', async (event) => {
       event.preventDefault();
