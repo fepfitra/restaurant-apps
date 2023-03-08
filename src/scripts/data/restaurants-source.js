@@ -13,8 +13,6 @@ class RestaurantsSource {
   }
 
   static async postReview({ id, name, review }) {
-    const container = document.getElementById('reviews');
-
     const response = await fetch(API_ENDPOINT.POST_REVIEW, {
       method: 'POST',
       headers: {
@@ -22,17 +20,7 @@ class RestaurantsSource {
       },
       body: JSON.stringify({ id, name, review }),
     });
-    const data = await response.json();
-    container.innerHTML = data.customerReviews.map((customerReview) => {
-      return  `     
-      <div class="reviews__item">
-        <h2 class="reviews__name">${customerReview.name}</h2>
-        <h3 class="reviews__date">${customerReview.date}</h3>
-        <p class="reviews__review">${customerReview.review}</p>
-      </div>
-    `;
-    })
-    return data;
+    return await response.json();
   }
 }
 
