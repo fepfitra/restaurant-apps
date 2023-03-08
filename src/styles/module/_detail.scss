@@ -107,34 +107,30 @@
   #add-review {
 
     .review__form {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // grid-template-columns: 1fr;
       width: 80%;
       margin: auto;
       row-gap: 10px;
 
-      .review__body {
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 10px;
+      .review__input {
+        background-color: black;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        border: 1px solid white;
+        padding: 20px;
+        resize: none;
+      }
 
-        .review__input {
-          background-color: black;
-          box-sizing: border-box;
-          border-radius: 10px;
-          font-size: 1.1rem;
-          border: 1px solid white;
-          padding: 20px;
-          resize: none;
-        }
+      #input__review__name {
+        color: white;
+      }
 
-        #input__review__name {
-          color: white;
-        }
-
-        #input__review__data {
-          color: white;
-        }
+      #input__review__data {
+        color: white;
       }
 
       .add__review__button {

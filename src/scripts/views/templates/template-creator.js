@@ -14,6 +14,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
     foods += `
       <div class="menu__item">
         <img width="60px" src="${imageFood}" class="menu__food-thumbnail" alt="${food.name}">
+
         <h3 class="menu__name">${food.name}</h3>
       </div>
     `;
@@ -24,6 +25,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
     drinks += `
       <div class="menu__item">
         <img width="60px" src="${imageDrink}" class="menu__drink-thumbnail" alt="${drink.name}">
+
         <h3 class="menu__name">${drink.name}</h3>
       </div>
     `;
@@ -34,7 +36,9 @@ const createRestaurantDetailTemplate = (restaurant) => {
     customerReviews += `
       <div class="reviews__item">
         <h2 class="reviews__name">${customerReview.name}</h2>
+
         <h3 class="reviews__date">${customerReview.date}</h3>
+
         <p class="reviews__review">${customerReview.review}</p>
       </div>
     `;
@@ -48,38 +52,45 @@ const createRestaurantDetailTemplate = (restaurant) => {
           <img class="desc-item__thumbnail-image"
           src="${CONFIG.BASE_URL + CONFIG.LARGE_PICTURE + restaurant.pictureId}"
           alt="${restaurant.description}">
+
           <div class="desc-item__rating">
             <h2 class="desc-item__rating-score">⭐️ ${restaurant.rating}</h3>
           </div>
         </div>
 
         <h3 class="desc-item__info">Alamat</h3>
+
         <h4 class="desc-item__info-value">${restaurant.address}</h4>
 
         <h3 class="desc-item__info">Kategori</h3>
+
         <h4 class="desc-item__info-value">${categories}</h4>
 
         <p class="desc-item__desc">${restaurant.description}</p>
       </article>
+
       <article id="menus" class="detail-card">
         <div class="menus__foods">
           ${foods}
         </div>
+
         <div class="menus__drinks">
           ${drinks}
         </div>
       </article>
+
       <article id="add-review" class="detail-card">
         <form class="review__form">
-          <div class="review__body">
-            <input type="text" class="review__input" id="input__review__name" placeholder="Nama">
-            <textarea class="review__input" id="input__review__data" placeholder="Masukkan Review" rows="5"></textarea>
-          </div>
+          <input type="text" class="review__input" id="input__review__name" placeholder="Nama">
+
+          <textarea class="review__input" id="input__review__data" placeholder="Masukkan Review" rows="5"></textarea>
+
           <button type="submit" class="add__review__button" id="submit__review__button">
             Tambahkan Review
           </button>
         </form>
       </article>
+
       <article id="reviews" class="detail-card">
         ${customerReviews}
       </article>
