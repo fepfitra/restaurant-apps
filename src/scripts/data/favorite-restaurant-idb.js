@@ -1,3 +1,4 @@
+/* eslint no-prototype-builtins: "off" */
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
 
@@ -22,7 +23,7 @@ const FavoriteRestaurantIdb = {
   },
 
   async putRestaurant(restaurant) {
-    if(!restaurant.hasOwnProperty('id')) {
+    if (!restaurant.hasOwnProperty('id')) {
       return;
     }
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);

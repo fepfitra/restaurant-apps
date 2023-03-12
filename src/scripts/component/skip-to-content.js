@@ -34,7 +34,7 @@ class skipToContent extends HTMLElement {
     `;
     this.shadowDOM.addEventListener('click', () => {
       document.querySelector(this._target).focus();
-    })
+    });
   }
 }
 

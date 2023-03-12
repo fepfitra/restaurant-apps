@@ -1,3 +1,4 @@
+/* eslint no-console: "off" */
 const NotificationHelper = {
   sendNotification({ title, options }) {
     if (!this._checkAvailability()) {

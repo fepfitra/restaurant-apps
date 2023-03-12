@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: "off" */
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import '../styles/responsive.scss';
@@ -7,7 +8,7 @@ import WebSocketInitiator from './utils/websocket-initiator';
 import CONFIG from './globals/config';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
- 
+
 const START = 10;
 const NUMBER_OF_IMAGES = 100;
 
