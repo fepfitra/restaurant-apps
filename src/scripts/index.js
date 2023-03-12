@@ -21,6 +21,7 @@ const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('main'),
+  loader: document.querySelector('.loader__container'),
 });
 
 window.addEventListener('hashchange', () => {
