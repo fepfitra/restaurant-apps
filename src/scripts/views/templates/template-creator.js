@@ -13,7 +13,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   restaurant.menus.foods.forEach((food) => {
     foods += `
       <div class="menu__item">
-        <img width="60px" src="${imageFood}" class="menu__food-thumbnail lazyload" alt="${food.name}">
+        <img width="60px" data-src="${imageFood}" class="menu__food-thumbnail lazyload" alt="${food.name}">
 
         <h3 class="menu__name">${food.name}</h3>
       </div>
@@ -24,7 +24,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
   restaurant.menus.drinks.forEach((drink) => {
     drinks += `
       <div class="menu__item">
-        <img width="60px" src="${imageDrink}" class="menu__drink-thumbnail lazyload" alt="${drink.name}">
+        <img width="60px" data-src="${imageDrink}" class="menu__drink-thumbnail lazyload" alt="${drink.name}">
 
         <h3 class="menu__name">${drink.name}</h3>
       </div>
@@ -50,7 +50,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
       <article id="desc-item" class="detail-card">
         <div class="desc-item__thumbnail">
           <img class="desc-item__thumbnail-image lazyload"
-          src="${CONFIG.BASE_URL + CONFIG.LARGE_PICTURE + restaurant.pictureId}"
+          data-src="${CONFIG.BASE_URL + CONFIG.LARGE_PICTURE + restaurant.pictureId}"
           alt="${restaurant.description}">
 
           <div class="desc-item__rating">
@@ -101,7 +101,7 @@ const createRestaurantDetailTemplate = (restaurant) => {
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="post-item">
     <img class="post-item__thumbnail lazyload"
-    src="${CONFIG.BASE_URL + CONFIG.SMALL_PICTURE + restaurant.pictureId}"
+    data-src="${CONFIG.BASE_URL + CONFIG.SMALL_PICTURE + restaurant.pictureId}"
     alt= "${restaurant.description}">
     <h2 class="resto__title"><a href="#/detail/${restaurant.id}">${restaurant.name} - ${restaurant.city}</a></h2>
     <h3 class="resto__rating">⭐️ ${restaurant.rating}</h3>
