@@ -9,6 +9,19 @@ body{
   .content {
     font-family: 'Open Sans', sans-serif;
 
+    .post-item-blank {
+      
+      .blank__message {
+        padding: 10rem 0;
+        color: white;
+        width: 80%;
+        margin: auto;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.6rem;
+      }
+    }
+
     .restos {
       .restos__label {
         font-size: 1.5rem;

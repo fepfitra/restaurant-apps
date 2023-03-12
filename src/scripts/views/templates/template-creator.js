@@ -98,6 +98,14 @@ const createRestaurantDetailTemplate = (restaurant) => {
   `;
 };
 
+const createRestaurantItemBlankTemplate = () => `
+  <article class="post-item-blank">
+    <h1 class="blank__message">
+      Maaf, sepertinya tidak ada restoran yang tersedia dalam daftar favorit Anda saat ini. Silakan tambahkan restoran yang Anda sukai untuk melihatnya di sini. Terima kasih!
+    <h1>
+  </article>
+`;
+
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="post-item">
     <img class="post-item__thumbnail lazyload"
@@ -123,6 +131,7 @@ const createLikedButtonTemplate = () => `
 export {
   createRestaurantDetailTemplate,
   createRestaurantItemTemplate,
+  createRestaurantItemBlankTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
 };
