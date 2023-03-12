@@ -36,6 +36,7 @@
     "karma-jasmine": "^4.0.2",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
+    "mini-css-extract-plugin": "^2.7.3",
     "puppeteer": "^19.7.4",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
