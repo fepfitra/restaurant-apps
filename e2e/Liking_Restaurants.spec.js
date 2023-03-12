@@ -68,3 +68,28 @@ Scenario('liking one restaurant', async  ( I ) => {
   const CurrentEmptyMessage = await I.grabTextFrom('.blank__message');
   assert.strictEqual(EmptyMessage, CurrentEmptyMessage);
 });
+
+Scenario('add review', async ( I ) => {
+  I.amOnPage('/');
+
+  I.waitForElement('.resto__title a', 2);
+  I.seeElement('.resto__title a');
+
+  I.click(locate('.resto__title a').first());
+
+  I.waitForElement('#add-review', 2);
+  I.seeElement('#add-review');
+
+  const review = 'e2e testing';
+
+  I.fillField('input', 'Fitrafep');
+  I.fillField('textarea', review);
+  I.click('button[type="submit"]');
+
+  I.waitForElement('#reviews', 2);
+  I.seeElement('#reviews');
+  const lastReview = locate('.reviews__item p').last();
+  const lastReviewText = await I.grabTextFrom(lastReview);
+
+  assert.strictEqual(review, lastReviewText);
+})
