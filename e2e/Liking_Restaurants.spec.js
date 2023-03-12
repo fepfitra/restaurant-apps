@@ -1,10 +1,30 @@
+const assert = require('assert');
+
 Feature('Liking Restaurants');
 
-Before((I) => {
-  I.amOnPage('/#/like');
-})
+Scenario('liking one restaurant and unlike it', async  ( I ) => {
+  I.amOnPage('/');
 
-Scenario('showing empty liked restaurants',  ( I ) => {
-  I.seeElement('#query')
-  I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
+  I.waitForElement('.resto__title a', 2);
+  I.seeElement('.resto__title a');
+
+  const firstResto = locate('.resto__title a').first();
+  I.click(firstResto);
+
+  I.waitForElement('#likeButton', 2);
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('#/like');
+  I.waitForElement('.post-item', 2);
+  I.seeElement('.post-item');
+
+  const firstLikedResto = locate('.resto__title a').first();
+  I.click(firstLikedResto);
+
+  I.waitForElement('#likeButton', 2);
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('#/like');
 });
