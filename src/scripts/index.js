@@ -30,5 +30,4 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
-  document.querySelector('.loader__container').style.display = 'none';
 });

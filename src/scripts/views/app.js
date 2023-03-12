@@ -25,6 +25,7 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+    document.querySelector('.loader__container').style.display = 'none';
   }
 }
 
