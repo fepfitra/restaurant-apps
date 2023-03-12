@@ -2,9 +2,12 @@
 @use 'media/footer';
 
 footer {
+  margin: auto;
   p {
+    text-align: center;
+    font-family: 'Open Sans';
     color: white;
     margin: auto;
-    padding: 1rem;
+    padding: 3rem 0;
   }
 }
