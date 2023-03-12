@@ -1,6 +1,11 @@
 @media screen and (min-width: 1200px) {
   .hero {
     width: 1000px;
-    // border: 1px solid red;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background-image: url(../public/images/heros/hero-image_3-small.jpg) !important;
   }
 }
