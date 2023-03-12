@@ -36,7 +36,7 @@ describe('Liking A restaurant', () => {
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-  it('should not add a movie again when its already liked', async () => {
+  it('should not add a restaurant again when its already liked', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
     await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
@@ -48,7 +48,7 @@ describe('Liking A restaurant', () => {
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-  it('should not add a movie when it has no id', async () => {
+  it('should not add a restaurant when it has no id', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
