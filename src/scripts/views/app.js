@@ -4,7 +4,9 @@ import routes from '../routes/routes';
 import '../component/skip-to-content';
 
 class App {
-  constructor({ button, drawer, content, loader }) {
+  constructor({
+    button, drawer, content, loader,
+  }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
