@@ -35,7 +35,7 @@ Scenario('liking one restaurant', async  ( I ) => {
   assert.strictEqual(firstRestoTitle, firstLikedRestoTitle);
 });
 
-Scenario('liking one restaurant', async  ( I ) => {
+Scenario('unlike the restaurant that has been liked before', async  ( I ) => {
   I.amOnPage('/');
 
   I.waitForElement('.resto__title a', 2);
@@ -62,7 +62,7 @@ Scenario('liking one restaurant', async  ( I ) => {
 
   I.amOnPage('#/like');
 
-  I.waitForElement('.blank__message');
+  I.waitForElement('.blank__message', 2);
   I.seeElement('.blank__message');
 
   const CurrentEmptyMessage = await I.grabTextFrom('.blank__message');
