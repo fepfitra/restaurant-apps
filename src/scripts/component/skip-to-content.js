@@ -23,7 +23,6 @@ class skipToContent extends HTMLElement {
           left: 0;
           text-decoration: none;
           font-size: 1rem;
-          font-family: 'Open Sans', sans-serif;
           padding: 10px;
         }
         .skip-link:focus {
